@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mSE-fx-5lt">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mSE-fx-5lt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-9W-xPv">
@@ -39,7 +39,7 @@
                                                 <constraint firstAttribute="width" secondItem="7Sk-rz-Yhj" secondAttribute="height" multiplier="750:666" id="EUZ-Fp-tFZ"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3o3-1D-LLz">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3o3-1D-LLz">
                                             <rect key="frame" x="40" y="343" width="295" height="48"/>
                                             <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                             <nil key="textColor"/>
@@ -81,6 +81,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pensamentos" image="quotes" id="8iW-on-x0o"/>
+                    <connections>
+                        <outlet property="constraintTop" destination="wtp-7R-IoJ" id="x4C-5L-h44"/>
+                        <outlet property="imageViewBackground" destination="mSE-fx-5lt" id="Hm2-QU-G5s"/>
+                        <outlet property="imageViewPicture" destination="7Sk-rz-Yhj" id="D7w-FU-Pw1"/>
+                        <outlet property="labelAuthor" destination="far-jH-nqR" id="Deh-va-dqi"/>
+                        <outlet property="labelQuote" destination="3o3-1D-LLz" id="jjW-FL-CY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +96,7 @@
         <!--Configurações-->
         <scene sceneID="6oQ-bq-13L">
             <objects>
-                <viewController id="E3v-1U-aDO" customClass="SettingsViewController" customModule="Pensamentos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E3v-1U-aDO" customClass="ConfigViewController" customModule="Pensamentos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqs-e6-2gk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,9 +107,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-kA-hQG">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-kA-hQG">
                                 <rect key="frame" x="163" y="58" width="51" height="31"/>
                                 <color key="onTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeAutoRefresh:" destination="E3v-1U-aDO" eventType="valueChanged" id="lTS-7k-iDy"/>
+                                </connections>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAs-07-uLJ">
                                 <rect key="frame" x="0.0" y="105" width="375" height="1"/>
@@ -120,6 +130,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="5" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="je9-kr-Tme">
                                 <rect key="frame" x="57" y="146" width="251.5" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTimeInterval:" destination="E3v-1U-aDO" eventType="valueChanged" id="SNg-fe-1r4"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6G-e5-FgJ">
                                 <rect key="frame" x="30" y="152" width="9" height="18"/>
@@ -153,6 +166,9 @@
                                     <segment title="Escuro"/>
                                 </segments>
                                 <color key="tintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorScheme:" destination="E3v-1U-aDO" eventType="valueChanged" id="fqL-av-wTM"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obs.: Toque em qualquer lugar da tela Pensamentos para mudar o pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-Yw-5qc">
                                 <rect key="frame" x="30" y="558" width="315" height="36"/>
@@ -194,6 +210,12 @@
                         <viewLayoutGuide key="safeArea" id="b12-Mt-yOm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="3Se-nC-ZoV"/>
+                    <connections>
+                        <outlet property="labelTimeInterval" destination="NTu-cY-YTa" id="gEv-LB-CEG"/>
+                        <outlet property="segmentedControlColorScheme" destination="puV-LD-8Pl" id="GXE-dh-jyG"/>
+                        <outlet property="sliderTimeInterval" destination="je9-kr-Tme" id="k1s-By-yL1"/>
+                        <outlet property="switchAutoRefresh" destination="fO3-kA-hQG" id="lRJ-XV-AcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joV-x3-qAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

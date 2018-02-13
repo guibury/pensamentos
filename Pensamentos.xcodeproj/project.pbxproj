@@ -8,20 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		000FB18B202F9E44007B02E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000FB18A202F9E44007B02E7 /* AppDelegate.swift */; };
-		000FB18D202F9E44007B02E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000FB18C202F9E44007B02E7 /* ViewController.swift */; };
 		000FB190202F9E44007B02E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000FB18E202F9E44007B02E7 /* Main.storyboard */; };
 		000FB192202F9E44007B02E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000FB191202F9E44007B02E7 /* Assets.xcassets */; };
 		000FB195202F9E44007B02E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000FB193202F9E44007B02E7 /* LaunchScreen.storyboard */; };
+		000FB19D202F9F4B007B02E7 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 000FB19C202F9F4B007B02E7 /* quotes.json */; };
+		002C623D2030DC8D00BF3F0D /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C623C2030DC8D00BF3F0D /* QuotesViewController.swift */; };
+		002C623F2030DCAE00BF3F0D /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C623E2030DCAE00BF3F0D /* ConfigViewController.swift */; };
+		002C62432030E2AF00BF3F0D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C62422030E2AF00BF3F0D /* Quote.swift */; };
+		002C62462030E2FB00BF3F0D /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C62452030E2FB00BF3F0D /* QuotesManager.swift */; };
+		002C62482030E31A00BF3F0D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C62472030E31A00BF3F0D /* Configuration.swift */; };
+		002C62492030FB4800BF3F0D /* Savoye LET.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 000FB19E202F9F61007B02E7 /* Savoye LET.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000FB187202F9E44007B02E7 /* Pensamentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pensamentos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000FB18A202F9E44007B02E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		000FB18C202F9E44007B02E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		000FB18F202F9E44007B02E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		000FB191202F9E44007B02E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000FB194202F9E44007B02E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		000FB196202F9E44007B02E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000FB19C202F9F4B007B02E7 /* quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
+		000FB19E202F9F61007B02E7 /* Savoye LET.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Savoye LET.ttc"; sourceTree = "<group>"; };
+		002C623C2030DC8D00BF3F0D /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		002C623E2030DCAE00BF3F0D /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		002C62422030E2AF00BF3F0D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		002C62452030E2FB00BF3F0D /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
+		002C62472030E31A00BF3F0D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		00AE3B8820326BE4006FE60B /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		00AE3B8920326BE4006FE60B /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+		00AE3B8A20326BE4006FE60B /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +69,63 @@
 		000FB189202F9E44007B02E7 /* Pensamentos */ = {
 			isa = PBXGroup;
 			children = (
+				00AE3B8720326BCE006FE60B /* Screenshot */,
 				000FB18A202F9E44007B02E7 /* AppDelegate.swift */,
-				000FB18C202F9E44007B02E7 /* ViewController.swift */,
-				000FB18E202F9E44007B02E7 /* Main.storyboard */,
+				000FB19F202F9F65007B02E7 /* Files */,
+				002C62442030E2D100BF3F0D /* Model */,
+				002C62412030DCE900BF3F0D /* View */,
+				002C62402030DCC900BF3F0D /* Controller */,
 				000FB191202F9E44007B02E7 /* Assets.xcassets */,
-				000FB193202F9E44007B02E7 /* LaunchScreen.storyboard */,
 				000FB196202F9E44007B02E7 /* Info.plist */,
 			);
 			path = Pensamentos;
+			sourceTree = "<group>";
+		};
+		000FB19F202F9F65007B02E7 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				000FB19E202F9F61007B02E7 /* Savoye LET.ttc */,
+				000FB19C202F9F4B007B02E7 /* quotes.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		002C62402030DCC900BF3F0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				002C623E2030DCAE00BF3F0D /* ConfigViewController.swift */,
+				002C623C2030DC8D00BF3F0D /* QuotesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		002C62412030DCE900BF3F0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				000FB18E202F9E44007B02E7 /* Main.storyboard */,
+				000FB193202F9E44007B02E7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		002C62442030E2D100BF3F0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				002C62422030E2AF00BF3F0D /* Quote.swift */,
+				002C62452030E2FB00BF3F0D /* QuotesManager.swift */,
+				002C62472030E31A00BF3F0D /* Configuration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00AE3B8720326BCE006FE60B /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				00AE3B8820326BE4006FE60B /* 01.png */,
+				00AE3B8A20326BE4006FE60B /* 02.png */,
+				00AE3B8920326BE4006FE60B /* 03.png */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000FB19D202F9F4B007B02E7 /* quotes.json in Resources */,
 				000FB195202F9E44007B02E7 /* LaunchScreen.storyboard in Resources */,
 				000FB192202F9E44007B02E7 /* Assets.xcassets in Resources */,
+				002C62492030FB4800BF3F0D /* Savoye LET.ttc in Resources */,
 				000FB190202F9E44007B02E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000FB18D202F9E44007B02E7 /* ViewController.swift in Sources */,
+				002C62482030E31A00BF3F0D /* Configuration.swift in Sources */,
+				002C62462030E2FB00BF3F0D /* QuotesManager.swift in Sources */,
+				002C62432030E2AF00BF3F0D /* Quote.swift in Sources */,
+				002C623D2030DC8D00BF3F0D /* QuotesViewController.swift in Sources */,
 				000FB18B202F9E44007B02E7 /* AppDelegate.swift in Sources */,
+				002C623F2030DCAE00BF3F0D /* ConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guilhermebury.Pensamentos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -294,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guilhermebury.Pensamentos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
